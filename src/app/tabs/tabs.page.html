@@ -1,0 +1,13 @@
+<ion-tabs (ionTabsDidChange)="getSelect($event)">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="mail">
+      <ion-icon [name]="selected == 'mail' ? 'mail' : 'mail-outline' "></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="meet">
+      <ion-icon [name]="selected == 'videocam' ? 'videocam' : 'videocam-outline' "></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

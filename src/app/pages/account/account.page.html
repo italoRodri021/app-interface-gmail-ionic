@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()" fill="clear" color="dark">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <img src="assets/images/logo.png" [style.width]="'70px'" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="assets/images/avatar.jpg"/>
+    </ion-avatar>
+    <ion-label>
+      Italo Rodri
+      <p>italo@gmail.com</p>
+    </ion-label>
+  </ion-item>
+  <ion-button expand="full" shape="round" fill="outline" color="dark">
+    Gerenciar sua conta
+  </ion-button>
+
+  <ion-item button class="ion-margin-top" lines="none">
+    <ion-icon name="person-add-outline" slot="start"></ion-icon>
+    Adicionar nova conta
+  </ion-item>
+  <ion-item button class="ion-no-margin-top" lines="none">
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    Gerenciar outras contas
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="6" class="ion-text-right">
+        Privacidade
+      </ion-col>
+      <ion-col size="6" class="ion-text-left">
+        Serviço
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

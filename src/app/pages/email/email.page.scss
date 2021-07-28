@@ -1,0 +1,51 @@
+ion-content {
+  .email-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 0.1px solid white;
+  }
+
+  .email{
+      margin-bottom: 6px;
+  }
+
+ // ion-label{
+ //     white-space: pre;
+ // }
+
+  .excerpt{
+      padding-top: 4px;
+  }
+
+  .date{
+      font-size: small;
+  }
+
+  .search-overlay {
+    margin: 20px;
+    width: 90%;
+    ion-row {
+      box-shadow: 0px 2px 3px 8px rgb(0, 0, 0, 15%);
+      background: white;
+      border-radius: 8px;
+    }
+    ion-avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  ion-refresher{
+      margin-top: 120px;
+  }
+  ion-list{
+      margin-top: 80px;
+  }
+}
