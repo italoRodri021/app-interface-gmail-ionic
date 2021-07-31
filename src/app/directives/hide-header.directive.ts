@@ -32,7 +32,7 @@ export class HideHeaderDirective {
       newDirection = Direction.UP;
     }
 
-    if(newPosition < -this.scrollDistance){
+    if (newPosition < -this.scrollDistance) {
       newPosition = -this.scrollDistance
     }
     let newOpacity = 1 - (newPosition / -this.scrollDistance);
