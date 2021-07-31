@@ -2,7 +2,7 @@ import { AccountPage } from './../account/account.page';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-email',
@@ -16,7 +16,8 @@ export class EmailPage implements OnInit {
   constructor(
     private http: HttpClient,
     private route: Router,
-    private popoverCtrl: PopoverController
+    private popoverCtrl: PopoverController,
+    private toastCtrl: ToastController
   ) { }
 
   ngOnInit() {
@@ -45,10 +46,6 @@ export class EmailPage implements OnInit {
 
   }
 
-  openDatails(id){
-    this.route.navigate(['tabs', 'mail', id]);
-  }
-
   doRefresh(ev){
 
     setTimeout(() => {
@@ -56,6 +53,16 @@ export class EmailPage implements OnInit {
       ev.target.complete();
 
     },3000)
+
+  }
+
+  async removeEmail(mail){
+
+    const toast = await this.toastCtrl.create({
+      message: 'Email excluido com sucesso!',
+      duration: 300
+    });
+    toast.present();
 
   }
 

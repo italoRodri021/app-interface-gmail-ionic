@@ -8,7 +8,7 @@ import { AnimatedFabDirective } from './animated-fab.directive';
 @NgModule({
   declarations: [
     HideHeaderDirective,
-    AnimatedFabDirective,
+    AnimatedFabDirective
   ],
   imports: [
     CommonModule

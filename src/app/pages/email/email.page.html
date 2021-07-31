@@ -30,36 +30,9 @@ scrollEvents="true"
       ></ion-refresher-content>
     </ion-refresher>
 
-    <ion-item class="email" *ngFor="let ITEM of listEmails" lines="none">
-      <ion-row class="ion-align-items-center">
-        <ion-col size="2" (click)="openDatails(ITEM.id)">
-          <div class="email-circle" [style.background]="ITEM.color">
-            {{ ITEM.from | slice:0:1 }}
-          </div>
-        </ion-col>
-        <ion-col size="8" (click)="openDatails(ITEM.id)">
-          <ion-label
-            class="ion-text-capitalize"
-            [style.font-weight]="!ITEM.read ? 'bold' : '' "
-          >
-            {{ ITEM.from.split('@')[0] }}
-            <p class="excerpt">
-              {{ (ITEM.content.length > 50) ? (ITEM.content | slice:0:50)+ '...'
-              : ITEM.content }}
-            </p>
-          </ion-label>
-        </ion-col>
-        <ion-col size="2">
-          <div class="ion-text-right" tappable (click)="ITEM.star = !ITEM.star">
-            <p class="date">{{ ITEM.date | date: 'dd. MMM' }}</p>
-            <ion-icon
-              [name]="ITEM.star ? 'star' : 'star-outline' "
-              [color]="ITEM.star ? 'warning' : 'medium' "
-            ></ion-icon>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-item>
+    <!--Recebe evento event emitter-->
+    <app-swipe-item (delete)="removeEmail(mail.id)" *ngFor="let mail of listEmails" [email]='mail'></app-swipe-item>
+
   </ion-list>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

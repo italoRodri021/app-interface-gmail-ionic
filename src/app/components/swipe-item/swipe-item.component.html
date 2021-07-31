@@ -1,3 +1,40 @@
-<p>
-  swipe-item works!
-</p>
+<!--Background swipe-->
+<div class="wrapper" #wrapper>
+  <div class="column">
+    <ion-icon name="trash-outline" color="light" class="ion-margin-start" #trash></ion-icon>
+  </div>
+  <div>
+    <ion-icon name="archive-outline" color="light" class="ion-margin-end" #archive></ion-icon>
+  </div>
+</div>
+
+<ion-item #item class="email" lines="none">
+  <ion-row class="ion-align-items-center">
+    <ion-col size="2" (click)="openDatails(mail.id)">
+      <div class="email-circle" [style.background]="mail.color">
+        {{ mail.from | slice:0:1 }}
+      </div>
+    </ion-col>
+    <ion-col size="8" (click)="openDatails(mail.id)">
+      <ion-label
+        class="ion-text-capitalize ion-text-wrap"
+        [style.font-weight]="!mail.read ? 'bold' : '' "
+      >
+        {{ mail.from.split('@')[0] }}
+        <p class="excerpt">
+          {{ (mail.content.length > 50) ? (mail.content | slice:0:50)+ '...'
+          : mail.content }}
+        </p>
+      </ion-label>
+    </ion-col>
+    <ion-col size="2">
+      <div class="ion-text-right" tappable (click)="mail.star = !mail.star">
+        <p class="date">{{ mail.date | date: 'dd. MMM' }}</p>
+        <ion-icon
+          [name]="mail.star ? 'star' : 'star-outline' "
+          [color]="mail.star ? 'warning' : 'medium' "
+        ></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-item>

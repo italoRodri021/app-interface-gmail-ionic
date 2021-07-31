@@ -1,3 +1,4 @@
+import { SharedComponentsModule } from './../../components/shared-components.module';
 import { SharedDirectivesModule } from './../../directives/shared-directives.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,8 @@ import { EmailPage } from './email.page';
     FormsModule,
     IonicModule,
     EmailPageRoutingModule,
-    SharedDirectivesModule
+    SharedDirectivesModule,
+    SharedComponentsModule
   ],
   declarations: [EmailPage]
 })

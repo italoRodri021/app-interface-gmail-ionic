@@ -1,0 +1,51 @@
+.email-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  border: 0.1px solid white;
+}
+
+.email {
+  height: 89;
+  display: flex;
+  background: white;
+}
+
+.excerpt {
+  padding-top: 4px;
+}
+
+.date {
+  font-size: small;
+}
+
+// -> Background swipe
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 89px;
+  position: absolute;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-basis: 100%;
+  flex-direction: column;
+}
+
+// -> Classe da Animacao de bordar do item
+.rounded {
+  border-radius: 10px;
+  z-index: 2;
+  -webkit-box-shadow: -10px 12px 32px -5px #212121;
+  box-shadow: -10px 12px 32px -5px #212121;
+}
